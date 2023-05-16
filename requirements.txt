@@ -1,0 +1,4 @@
+transformers
+datasets
+jiwer
+wandb

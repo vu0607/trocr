@@ -1,0 +1,23 @@
+model:
+  model_path: microsoft/trocr-small-handwritten
+  processor_path: microsoft/trocr-base-handwritten
+  num_epochs: 2
+  max_length: 64
+  early_stopping: True
+  no_repeat: 3
+  length_penalty: 2.0
+  num_beams: 5
+  hidden_size: 256
+  num_layers: 2
+  learning_rate: 0.00005
+  save_path: v1.2.0
+  print_batch_step: 10
+  eval_batch_step: 100
+train:
+  train_dir: private_test_handwritten_v3.5.0/
+  train_label: private_test_handwritten_v3.5.0/label.txt
+  batch_size: 2
+eval:
+  valid_dir: private_test_handwritten_v3.5.0/
+  valid_label: private_test_handwritten_v3.5.0/label.txt
+  batch_size: 2
